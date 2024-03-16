@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Dashboard with Sidebars</title>
+  <link rel="stylesheet" type="text/css" href="login-dashboard.css">
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#" id="logout">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="header">
+      <h1>Dashboard</h1>
+      <div class="box1">
+        <br>
+        <span>Welcome, Judiklod!!!</span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="box2">
+        <span>This is the dashboard!</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('logout').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'registration-form.html';
+      });
+    });
+  </script>
+</body>
+</html>
