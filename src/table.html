@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-pink-300 bg-indigo-200">
+  <div class="p-4 flex justify-between">
+    <div class="col-span-3">
+    </div>
+  </div>
+  <div class="px-3 py-4 grid grid-cols-10 gap-4">
+    <div class="col-span-3">
+      <div class="w-full text-md bg-white shadow-md rounded mb-4">
+        <div class="p-3">
+          <h1 class="text-3xl md:text-left font-bold">Create an Account</h1>
+          <label for="name" class="block text-gray-700">Name</label>
+          <input id="name" type="text" value="" class="bg-transparent border-b-2 border-gray-300 py-2 w-full">
+        </div>
+        <div class="p-3">
+          <label for="email" class="block text-gray-700">Email</label>
+          <input id="email" type="text" value="" class="bg-transparent border-b-2 border-gray-300 py-2 w-full">
+        </div>
+        <div class="p-3">
+          <label for="role" class="block text-gray-700">Role</label>
+          <select id="role" class="bg-transparent border-b-2 border-gray-300 py-2 w-full">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div class="p-3">
+          <button type="button" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Create Account</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-7">
+      <div class="md:w-full text-md bg-white shadow-md rounded mb-4">
+        <h2 class="text-3xl md:text-left font-bold shadow-lg">User List</h2>
+        <table class="w-full text-md bg-white shadow-md rounded mb-4">
+          <tbody>
+            <tr class="border-b">
+              <th class="text-left p-3 px-5">ID</th>
+              <th class="text-left p-3 px-5">Name</th>
+              <th class="text-left p-3 px-5">Email</th>
+              <th class="text-left p-3 px-5">Role</th>
+              <th class="text-right p-3 px-5">Actions</th>
+            </tr>
+            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+              <td class="p-3 px-5">1</td>
+              <td class="p-3 px-5">Judi</td>
+              <td class="p-3 px-5">Judi@gmail.com</td>
+              <td class="p-3 px-5">Admin</td>
+              <td class="p-3 px-5 flex justify-end">
+                <button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit"></i></button>
+                <button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash-alt"></i></button>
+              </td>
+            </tr>
+            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+              <td class="p-3 px-5">2</td>
+              <td class="p-3 px-5">Klod</td>
+              <td class="p-3 px-5">Klod@gmail.com</td>
+              <td class="p-3 px-5">User</td>
+              <td class="p-3 px-5 flex justify-end">
+                <button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit"></i></button>
+                <button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash-alt"></i></button>
+              </td>
+            </tr>
+            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+              <td class="p-3 px-5">3</td>
+              <td class="p-3 px-5">Amam</td>
+              <td class="p-3 px-5">Amam@gmail.com</td>
+              <td class="p-3 px-5">Admin</td>
+              <td class="p-3 px-5 flex justify-end">
+                <button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit"></i></button>
+                <button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash-alt"></i></button>
+              </td>
+            </tr>
+            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+              <td class="p-3 px-5">4</td>
+              <td class="p-3 px-5">Andre</td>
+              <td class="p-3 px-5">Andre@gmail.com</td>
+              <td class="p-3 px-5">User</td>
+              <td class="p-3 px-5 flex justify-end">
+                <button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit"></i></button>
+                <button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash-alt"></i></button>
+              </td>
+            </tr>
+            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+              <td class="p-3 px-5">5</td>
+              <td class="p-3 px-5">Xyrille</td>
+              <td class="p-3 px-5">Xyrille@gmail.com</td>
+              <td class="p-3 px-5">Admin</td>
+              <td class="p-3 px-5 flex justify-end">
+                <button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit"></i></button>
+                <button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash-alt"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
