@@ -28,14 +28,13 @@ document.getElementById('createAccountBtn').addEventListener('click', function()
     const roleCell = newRow.insertCell(3);
     const actionsCell = newRow.insertCell(4);
   
-    idCell.textContent = lastId + 1; // Auto-increment ID based on existing rows
+    idCell.textContent = lastId + 1;
     nameCell.textContent = name;
     emailCell.textContent = email;
-    roleCell.innerHTML = `<span>${role}</span>`; // Display selected role
+    roleCell.innerHTML = `<span>${role}</span>`;
     actionsCell.innerHTML = `<button type="button" onclick="toggleEdit(this)" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-edit"></i></button>
       <button type="button" onclick="deleteRow(this)" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><i class="fas fa-trash-alt"></i></button>`;
     
-    // Apply classes to match the design of the pre-existing row
     newRow.classList.add('border-b', 'hover:bg-orange-100', 'bg-gray-100');
     idCell.classList.add('p-3', 'px-5');
     nameCell.classList.add('p-3', 'px-5');
@@ -43,7 +42,7 @@ document.getElementById('createAccountBtn').addEventListener('click', function()
     roleCell.classList.add('p-3', 'px-5');
     actionsCell.classList.add('p-3', 'px-5', 'flex', 'justify-end');
 
-    nameInput.value = ''; // Clear input fields after creating account
+    nameInput.value = '';
     emailInput.value = '';
   });
 
@@ -56,14 +55,12 @@ function toggleEdit(btn) {
     if (btn.textContent === 'Save') {
       btn.textContent = 'Edit';
       
-      // Get the updated values from input fields
       const newName = nameCell.querySelector('input').value;
       const newEmail = emailCell.querySelector('input').value;
       
       nameCell.innerHTML = `<span>${newName}</span>`;
       emailCell.innerHTML = `<span>${newEmail}</span>`;
   
-      // Code to save the edited data (e.g., send to server or update local storage)
     } else {
       btn.textContent = 'Save';
       
@@ -79,9 +76,7 @@ function deleteRow(btn) {
     if (confirm('Are you sure you want to delete this user?')) {
       const row = btn.closest('tr');
       row.remove();
-      // Code to delete the user (e.g., send request to server to delete user)
   
-      // Update IDs after deletion
       const table = document.getElementById('userTable').getElementsByTagName('tbody')[0];
       const rows = table.rows;
       for (let i = 0; i < rows.length; i++) {
